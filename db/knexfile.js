@@ -6,12 +6,12 @@ module.exports = {
         client: "postgresql",
         version: "13.4",
         connection: {
-            host : "192.168.1.79",
+            host : "XXX.XXX.X.XX",
             port : 5432,
             database: "incasale",
             schema: "incasale",
-            user:     "darwinrr",
-            password: "darwinrr71",
+            user:     "XXXXXXXX",
+            password: "XXXXXXXXXX",
         },
         pool: {
             min: 2,
