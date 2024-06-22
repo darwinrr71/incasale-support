@@ -1,0 +1,86 @@
+<%- include('../../partials/head'); %>
+<%- include('../../partials/navbar'); %>
+<section class="home-section">
+  <%- include('../../partials/homepage'); %>
+  <section class="container">
+    <article class="states">
+      <article class="header-title-table">
+        <span class="title"><%= title %></span>
+        <a name="add" type="btn" id="add" class="btn btn-success add" href="/states/new-state">
+          <i class="fa fa-plus"></i> Add new state</a>
+      </article>
+      <table class="table table-bordered table-hover border scrollable-table" id="dataTable">
+        <!-- table-striped(Bootstrap class)-->
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody id="table-data">
+          <% if (data.length > 0) { %>
+            <!-- estados: variable for the foreach-->
+            <% let idCont = 0  %>
+            <% data.forEach(estados => { %>
+              <!--idReg is used to place the cursor back into the registry when it returns from the backend for a state addition, modification, or deletion.-->
+              <tr id="idReg<%= idCont %>">
+               <th scope = "row"><%= estados.id_estado %></th>
+                <td><%= estados.nombre %></td>
+                <% idCont++ %>
+                <td>
+                  <a class="edit btn" id="edit" title="Edit" data-bs-toggle="tooltip"  type="submit"
+                       data-value="<%= estados.id_estado %>" href="/states/edit-state/<%= estados.id_estado %>">
+                      <i class="bi bi-pencil-square"></i>
+                  </a>
+                  <a class="delete btn" id="delete" title="Delete" data-bs-toggle="tooltip"
+                  type="submit"
+                       data-value="<%= estados.id_estado %>" href="/states/delete-state/<%= estados.id_estado %>">
+                      <i class="bi bi-trash"></i>
+                    </a>
+                </td>
+              </tr>
+            <% }) %> 
+          <% } %>
+        </tbody>
+      </table>
+    </article>
+  </section>
+</section>
+<%- include('../../partials/footer'); %>
+
+<script>
+  
+  var dataReg = ""
+  $("table tbody tr").click(function() {
+    dataReg = $(this).find("th:eq(0)").text();
+  });
+
+  $('tr').click(function(){
+      cleanTr()
+      $(this).addClass('row-selected')
+      localStorage.setItem("myContent", dataReg);
+  })
+    
+  function cleanTr(){
+    $('.row-selected').each(function(index, element){
+      $(element).removeClass('row-selected')
+    })
+  }
+  
+  $('table tbody tr').each(function () {
+    let myRegTable = localStorage.getItem("myContent");
+    let idReg = $(this).children().eq(0);
+    if (idReg.text().includes(myRegTable)) {
+      cleanTr();
+      $(this).addClass('row-selected');
+      let valor = $(this).attr('id')
+      let element= document.getElementById(valor)
+      element.scrollIntoView();
+      element.scrollIntoView(false);
+      element.scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+      localStorage.clear()
+    }
+  });
+  
+</script>

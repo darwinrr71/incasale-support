@@ -1,0 +1,349 @@
+.error-404 {
+  display: block;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  z-index: 1;
+  margin: 20px auto;
+  overflow: hidden;
+  background: #fff;
+  padding: 28px;
+  -webkit-box-shadow: 0px 3px 20px #699f48;
+          box-shadow: 0px 3px 20px #699f48;
+}
+.error-404 .img-404 img {
+  width: 50%;
+  max-width: 500px;
+  display: block;
+  float: left;
+
+  padding: 20px;
+  color: #000000;
+}
+.error-404 .view-404txt {
+  width: 50%;
+  display: block;
+  float: right;
+  padding: 20px;
+  /*font-family: Verdana;*/
+  color: #000000;
+}
+.error-404 .view-404txt h1 {
+  font-size: 25px;
+  color: #000000;
+  padding-bottom: 20px;
+  font-family: montserrat-extrabold;
+}
+.error-404 .view-404txt p.message {
+  font-size: 25px;
+  color: #333333;
+  /*text-align: justify;*/
+  line-height: 30px; /* espacion entre lineas de texto */
+}
+.error-404 .view-404txt a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+}
+.home-section .back-page{
+  width: 50px;
+  font-size: 2em;
+  margin: 0 10px;
+  display: block;				/* ancla al inicio del div*/
+  position: flex;
+}
+[data-title]:hover:after {
+  opacity: 1;
+  transition: all 0.1s ease 0.5s;
+  visibility: visible;
+}
+[data-title]::after {
+  content: attr(data-title);
+  background-color: #333;
+  color: #fff;
+  font-size: 12px;
+  font-family: Tahoma;
+  position: absolute;
+  padding: 3px 10px;
+  bottom: -1.6em;
+  left: 75%;
+  white-space: nowrap;
+  box-shadow: 1px 1px 3px #222222;
+  opacity: 0;
+  border: 1px solid #111111;
+  z-index: 99999;
+  visibility: hidden;
+  border-radius: 6px;
+}
+[data-title] {
+  position: relative;
+}
+/* Buttom back-page */
+.home-section .back-page .bi-arrow-left-square-fill{
+  color: #9e9d9d;
+}
+.home-section .container {
+  height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  /*width: calc(40% - 40px); con esto se reduce el tamaño de esta seccion*/
+}
+.states {
+  margin:0px auto;
+  width: 40%;
+}
+.header-title-table{
+  font-size: 16px;
+  padding: 10px 0px;
+  color: #11101d;
+  font-weight: bolder;
+  font-family: montserrat-light;
+}
+.header-title-form{
+  font-style: italic;
+  font-size: 16px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+  color: #11101d;
+  font-weight: bolder;
+  margin-left: -50px;
+}
+.container .btn-success {
+  height: 28px;
+  font-weight: bolder;
+  font-size: 12px;
+  min-width: 100px;
+  border-radius: 10px;
+  line-height: 13px;
+  background-color: #ababab;
+  border-color: #ababab;
+}
+.header-title-table .add {
+  float: right;
+}
+.states .table {
+  color: #11101d;
+  font-size: 14px;
+  width: 100%;
+  table-layout: fixed;
+}
+.states .table thead {
+  font-family: montserrat-bold;
+  background-color: #ffffff;
+  /* these two options keeps the header fixed */
+  position: sticky;
+  top: 0;
+  border-style: hidden;
+}
+.states .table thead th:first-child{
+  width: 1%;
+}
+.states .table thead th:nth-child(2){
+  width: 13%;
+}
+.states .table thead th:last-child{
+  width: 1%;
+  padding-right: 18px;
+}
+.states .table th, td{
+  width: 100%;
+  text-align: left;
+  vertical-align: top;
+  overflow: hidden;
+  height: 1px;
+}
+.states .table td:first-child {
+  width:50px;
+}
+.states .table td:nth-child(2) {
+  width:300px;
+}
+.states .table td:last-child {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  text-align: right;
+  width: 100px;
+}
+.states .scrollable-table {
+  max-height: 300px;
+  overflow: auto;
+  display:inline-block;
+}
+.states .table tbody {
+  width: 100%;
+  font-family: montserrat-light;
+}
+.states .table tbody th[scope=row] {
+  width: 50px;
+  text-align: right;
+}
+.states .table tbody td a {
+  cursor: pointer;
+  margin: 0 5px;
+  min-width: 24px;
+}    
+.states .table tbody td a.edit {
+  color: #71c98e;
+  padding: 0px;
+}
+.states .table tbody td a.delete {
+  color: #E34724;
+  padding: 0px;
+}
+.states .table tbody td i {
+  font-size: 15px;
+  display: grid;
+}
+.form-container{
+  position: relative;
+  display:block;
+  height: 30%;
+  width: 35%;
+  border: 1px solid #fff0  !important;
+  padding-left: 50px;
+  top: 20px;
+  left: 20px;
+  font-family: montserrat-light;
+  /*#dee2e6*/
+}
+.form-container label{
+  font-size: 15px;
+}
+.form-container .error-input {
+  content:"\a";
+  position: absolute;
+  display:block;
+  color: #E34724;
+  font-size:0.7em;
+  font-weight: bolder;
+  left: 110px;
+}
+/*.form-container #error-input-a, #error-input-b {
+  bottom:84px;
+  left:110px;
+}*/
+.form-container .error-cod-not-found {
+  content:"\a";
+  position: absolute;
+  display:block;
+  color: #000000;
+  font-size:x-large;
+  font-weight: bolder;
+}
+.form-container #error-cod-not-found {
+  bottom: 54px;
+  left: 80px;
+  opacity: 0.5;
+  font-style:italic;
+}
+.form-container .cancel {
+  position: absolute;
+  display:block;
+  bottom:20px;
+  left:80px;
+}
+.form-container .save {
+  position: absolute;
+  display:block;
+  bottom:20px;
+  left:210px;
+  /*
+  margin-top: 6em;
+  margin-left: -90px;
+  float: right;*/
+}
+::-webkit-input-placeholder {
+  font-style: italic;
+  font-size: 1em;
+  padding: 5px;
+}
+::-moz-placeholder {
+  font-style: italic;
+  font-size: 1em;
+  padding: 5px;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 1em;
+  padding: 5px;
+}
+::-ms-input-placeholder {
+  font-style: italic;
+  font-size: 1em;
+  padding: 5px;
+}
+::placeholder {
+  font-style: italic;
+  font-size: 1em;
+  padding: 5px;
+}
+input {
+  height: 22px;
+}
+.disabledmain {
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: -1;
+} 
+/* NO SE SI LA USO POR ESO LO COMENTO */
+/*.disabled-table {
+  pointer-events: none;
+  opacity: 0.4;
+  z-index: -1;
+}*/
+
+.row-selected{
+  background: #d6d5d5;
+}
+
+tr{
+  cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+  .home-section .container {
+    display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: center;
+	  align-items: baseline;
+	  align-content: stretch;
+  }
+  .home-section .back-page{
+    font-size: 1.5em;;
+  }
+  .home-section .container img {
+    width: 100%;
+    margin-top: 2em;
+  }
+  .container .states {
+    display: inline-block;
+    width: 100%;
+  }
+  .container .states .table{
+    font-size : 17px;
+  }
+  .form-container{
+    width: 100%;
+    padding-left: 20px;
+  }
+  .form-container .cancel{
+    left: 30px;
+  }
+  .form-container .save{
+    left: 180px;
+  }
+  .form-container .error-input{
+    position: static;
+    width: 50%;
+    margin-left: 15%;
+  }
+}
+
+
+

@@ -1,0 +1,113 @@
+/*------------ FONT OPEN MONTSERRAT --------------*/
+@font-face {
+    src: url(./fonts/Montserrat-Black.ttf);
+    font-family: montserrat-black;
+}
+@font-face {
+    src: url(./fonts/Montserrat-Bold.ttf);
+    font-family: montserrat-bold;
+}
+@font-face {
+    src: url(./fonts/Montserrat-ExtraBold.ttf);
+    font-family: montserrat-extrabold;
+}
+@font-face {
+    src: url(./fonts/Montserrat-ExtraLight.ttf);
+    font-family: montserrat-extralight;
+}
+@font-face {
+    src: url(./fonts/Montserrat-Light.ttf);
+    font-family: montserrat-light;
+}
+@font-face {
+    src: url(./fonts/Montserrat-Medium.ttf);
+    font-family: montserrat-medium;
+}
+@font-face {
+    src: url(./fonts/Montserrat-Regular.ttf);
+    font-family: montserrat-regular;
+}
+@font-face {
+    src: url(./fonts/Montserrat-SemiBold.ttf);
+    font-family: montserrat-semibold;
+}
+@font-face {
+    src: url(./fonts/Montserrat-Thin.ttf);
+    font-family: montserrat-thin;
+}
+
+/*------------ FONT OPEN SANS --------------*/
+@font-face {
+    src: url(./fonts/OpenSans-Bold.ttf);
+    font-family: pen-sans-bold;
+}
+@font-face {
+    src: url(./fonts/OpenSans-ExtraBold.ttf);
+    font-family: open-sans-extrabold;
+}
+@font-face {
+    src: url(./fonts/OpenSans-Light.ttf);
+    font-family: open-sans-light;
+}
+@font-face {
+    src: url(./fonts/OpenSans-Medium.ttf);
+    font-family: open-sans-medium;
+}
+@font-face {
+    src: url(./fonts/OpenSans-Regular.ttf);
+    font-family: open-sans-regular;
+}
+@font-face {
+    src: url(./fonts/OpenSans-SemiBold.ttf);
+    font-family: open-sans-semibold;
+}
+
+
+/*------------ FONT QUICKSAND --------------*/
+@font-face {
+    src: url(./fonts/Quicksand-Bold.ttf);
+    font-family: quiksand-bold;
+}
+@font-face {
+    src: url(./fonts/Quicksand-Light.ttf);
+    font-family: quiksand-light;
+}
+@font-face {
+    src: url(./fonts/Quicksand-Medium.ttf);
+    font-family: quiksand-medium;
+}
+@font-face {
+    src: url(./fonts/Quicksand-Regular.ttf);
+    font-family: quiksand-regular;
+}
+@font-face {
+    src: url(./fonts/Quicksand-SemiBold.ttf);
+    font-family: quiksand-semibold;
+}
+
+
+/*------------ FONT ROBOT --------------*/
+@font-face {
+    src: url(./fonts/Roboto-Black.ttf);
+    font-family: roboto-black;
+}
+@font-face {
+    src: url(./fonts/Roboto-Bold.ttf);
+    font-family: roboto-bold;
+}
+@font-face {
+    src: url(./fonts/Roboto-Light.ttf);
+    font-family: roboto-light;
+}
+@font-face {
+    src: url(./fonts/Roboto-Medium.ttf);
+    font-family: roboto-medium;
+}
+@font-face {
+    src: url(./fonts/Roboto-Regular.ttf);
+    font-family: roboto-regular;
+}
+@font-face {
+    src: url(./fonts/Roboto-Thin.ttf);
+    font-family: roboto-thin;
+}

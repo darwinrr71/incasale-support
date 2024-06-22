@@ -1,0 +1,98 @@
+<%- include('../../partials/head'); %>
+<%- include('../../partials/navbar'); %>
+<section class="home-section">
+  <%- include('../../partials/homepage'); %>
+  <section class="container">
+    <article class="form-container">
+      <article class="header-title-form">
+        <span class="title"><%= title %></span>
+      </article>
+      <% if (error) { %>
+        <span class="error-cod-not-found" id="error-cod-not-found"><%= msg_error %></span>
+        <a 
+        name="cancel" 
+        type="btn" 
+        id="cancel" 
+        class="btn btn-success cancel"
+        href="/states/states"
+      >
+      <i class="fa fa-plus"></i> Return</a>
+      <% }else { %> 
+      
+      <!-- Delete State-->
+      <form id="deleteFormState"  data-id ="<%= dataState[0].id_estado %>" class="form-data">
+        <label> Name : 
+          <input 
+            class="text dataElement" 
+            id="nombre-input"
+            type="text" 
+            name="nombre" 
+            value="<%= dataState[0].nombre %>"
+            
+          >
+        </label>
+        <span class="error-input" id="error-input-a"><%= msg_error %></span>
+        <button 
+          id="save-delete"
+          name="save" 
+          type="submit"
+          value="submit" 
+          class="btn btn-success success save"
+        >
+        <i class="fa fa-plus"></i> Delete</button>
+      </form>
+      <a 
+        name="cancel" 
+        type="btn" 
+        id="cancel" 
+        class="btn btn-success cancel"
+        href="/states/states"
+      >
+      <i class="fa fa-plus"></i> Cancel</a>
+      <% } %>
+    </article>
+  </section>
+</section>
+<%- include('../../partials/footer'); %>
+<script>
+  var text = document.getElementById("nombre-input");
+  var error_a = document.getElementById("error-input-a");
+  var deleteFormState = document.getElementById("deleteFormState");
+  var dataElement = document.querySelectorAll(".dataElement");
+  var elemento = text.value;
+  text.focus();
+
+  deleteFormState.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const nombre = text.value;
+    const error = error_a.value
+    const id_estado = deleteFormState.dataset.id;
+    $.ajax({
+        method: "delete",
+        url: `/states/${id_estado}`,
+        contentType: "application/json",
+        data: JSON.stringify({nombre}),
+        cache: false
+      }).
+        done(function (data, textStatus, jqXHR){
+          window.location.href="/states/states";
+        }).
+        /*  jqXHR: Response from the backend "Description already exists"
+            textStatus: "error"
+            errorThrown: "Internal Server Error"
+        */
+        fail(function (jqXHR, textStatus, errorThrown){
+          error_a.innerHTML = jqXHR.responseText;
+          return false;
+        }).
+        /** always( function() ): always run after the .done() or .fail().*/
+        always(function(jqXHR, textStatus, errorThrown){
+          console.log(textStatus) /* textStatus = "done: success" or "fail: error"*/
+        });
+  })
+
+  /* Disable all elements of the document */
+  dataElement.forEach((item) => {
+    item.disabled = true;
+  });
+</script>

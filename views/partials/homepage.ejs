@@ -1,0 +1,13 @@
+<%- include('../partials/hometitle'); %>
+<div class="back-page">
+  <!-- The href="/" tells the browser to go back to index page..-->
+  <a href="/" data-title="Home">
+    <i class="bi bi-arrow-left-square-fill"  id="btn_backpage" alt="Boton"></i>
+  </a>
+</div>
+<script>
+  /** If the class "disablemain" does not exist in "dsb_sidebar" it creates it */
+  if (!document.querySelector("#dsb_sidebar.disabledmain")) {
+    $("#dsb_sidebar").addClass("disabledmain");
+  }
+</script>
